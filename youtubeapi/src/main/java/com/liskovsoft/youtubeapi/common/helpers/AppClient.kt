@@ -96,7 +96,7 @@ internal enum class AppClient(
     val browserVersion by lazy { browserInfo?.second }
     val browseTemplate by lazy { String.format(JSON_POST_DATA_BASE, clientName, clientVersion, clientScreen, userAgent,
         (postDataBrowser ?: "") + (postData ?: "") + (postDataBrowse ?: "")) }
-    val baseTemplate by lazy { String.format(JSON_POST_DATA_BASE, clientName, clientVersion, clientScreen, userAgent,
+    val baseTemplate by lazy { String.format(JSON_POST_DATA_BASE, "iOS", "21.20.4", clientScreen, "com.google.ios.youtube/21.20.4 (iPhone16,2; U; CPU iOS 19_4 like Mac OS X;)",
         (postDataBrowser ?: "") + (postData ?: "")) }
 
     val isAuthSupported by lazy { Helpers.equalsAny(this, TV, TV_LEGACY, TV_EMBED, TV_KIDS, TV_DOWNGRADED) } // NOTE: TV_SIMPLY doesn't support auth
